@@ -1,0 +1,14 @@
+---
+version: "3"
+
+services:
+  fullstack:
+    image: Docker.autonubil.net/schule/netzwerke-und-dienste-bereitstellen/sdn_cisco_lf9
+    restart: always
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../sdn_cisco_lf9/cert:/noerkelit/sdn/backend/cert
+      - ../sdn_cisco_lf9/.env:/noerkelit/sdn/backend/.env
